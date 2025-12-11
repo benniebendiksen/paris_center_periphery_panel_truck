@@ -58,7 +58,7 @@
         
         /* Header */
         .hero {
-            min-height: 80vh; /* Shortened slightly */
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -192,7 +192,7 @@
         .intro {
             max-width: 800px;
             margin: 0 auto;
-            padding: 5rem 2rem 3rem; /* Reduced padding */
+            padding: 5rem 2rem 3rem;
         }
         
         .intro-text {
@@ -420,7 +420,7 @@
             font-size: 0.9rem;
             color: var(--color-sepia);
             line-height: 1.6;
-            flex-grow: 1; /* Pushes the footer down */
+            flex-grow: 1;
         }
         
         .chapter-author {
@@ -560,7 +560,7 @@
             Paris is often celebrated as the capital of romance, fashion, and luxury, but its history reveals a deeper story of division. From the medieval privileges of the <strong>Latin Quarter</strong> to the exclusion of the modern <em>banlieues</em>, the city has always been shaped by a tension between its glittering center and its periphery.
         </p>
         <p class="intro-text">
-            We begin with the <strong>Latin Quarter</strong>, where medieval educational privileges first established a sense of exclusivity, before moving to <strong>Haussmann’s transformation</strong>, which physically restructured the city to favor the elite. The story continues through the <strong>post-war era</strong>, exploring how immigrant labor rebuilt the capital while being pushed to the edges. Finally, we analyze <strong>transportation networks</strong>, showing how the Metro and RER solidified these boundaries rather than erasing them.
+            We begin with the <strong>Latin Quarter</strong>, where medieval educational privileges first established a sense of exclusivity, before moving to <strong>Haussmann's transformation</strong>, which physically restructured the city to favor the elite. The story continues through the <strong>post-war era</strong>, exploring how immigrant labor rebuilt the capital while being pushed to the edges. Finally, we analyze <strong>transportation networks</strong>, showing how the Metro and RER solidified these boundaries rather than erasing them.
         </p>
         <p class="intro-text">
             This project traces that history using interactive maps to explore how architecture, immigration, and transportation have drawn lines between those who belong in the center and those pushed to the edge.
@@ -591,7 +591,7 @@
         <div class="panel-wrapper">
             <div class="panel-header">
                 <h2>Interactive Map Story</h2>
-                <p>Scroll through 20 scenes across 3 historical maps</p>
+                <p>Scroll through 29 scenes across 5 historical maps</p>
             </div>
             <div class="panel-frame">
                 <div class="panel-truck-container">
@@ -604,39 +604,40 @@
     <section class="chapters">
         <div class="chapters-title">
             <h2>Chapters</h2>
+            <p>Click any chapter to jump directly to that section</p>
         </div>
         <div class="chapters-grid">
             
             <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(1)">
                 <div class="chapter-number">I</div>
                 <h4>The Birth of the Latin Quarter</h4>
-                <p>In medieval Paris, students established an intellectual enclave on the Left Bank. King Philip Augustus granted them exemption from taxes and the right to be judged only by ecclesiastical courts—distinguishing them from the common population.</p>
+                <p>An 18th century map from 1705 depicts La Quartier Latin—where the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society, where King Philip Augustus granted students exemption from taxes and the right to be judged only by ecclesiastical courts.</p>
                 <div class="chapter-author">By Vanessa Moussa-Adamo</div>
-                <div class="chapter-scene-indicator">Starts at Scene 1</div>
+                <div class="chapter-scene-indicator">Scenes 1–5</div>
             </a>
             
-            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(5)">
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(6)">
                 <div class="chapter-number">II</div>
                 <h4>Haussmann's Paris</h4>
-                <p>Under Napoleon III, Paris was transformed: boulevards widened, squares beautified. The heart became saturated with culture—rebuilt to be admired by the elite, while peripheral areas remained underinvested and symbolically distanced.</p>
+                <p>Under Napoleon III, Paris was transformed: boulevards widened, squares beautified. The heart became saturated with culture—rebuilt to be admired by the elite, while peripheral areas remained underinvested and symbolically distanced. Baudelaire wrote of his melancholy watching this transformation.</p>
                 <div class="chapter-author">By Freddly</div>
-                <div class="chapter-scene-indicator">Starts at Scene 5</div>
+                <div class="chapter-scene-indicator">Scenes 6–11</div>
             </a>
             
-            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(9)">
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(12)">
                 <div class="chapter-number">III</div>
                 <h4>Immigration and Reconstruction</h4>
-                <p>After two World Wars, immigrants from Eastern Europe and North Africa rebuilt Paris. But housing was expensive in the center, so migrants settled in the banlieues—pushed aside, marginalized, and often targeted by police.</p>
+                <p>After two World Wars, immigrants from Eastern Europe and North Africa rebuilt Paris. But housing was expensive in the center, so migrants settled in the banlieues—pushed aside, marginalized, watched, policed, and controlled. The myth of Paris contrasts sharply with the reality.</p>
                 <div class="chapter-author">By Gaelle</div>
-                <div class="chapter-scene-indicator">Starts at Scene 9</div>
+                <div class="chapter-scene-indicator">Scenes 12–19</div>
             </a>
             
-            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(14)">
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(20)">
                 <div class="chapter-number">IV</div>
                 <h4>Transportation and Division</h4>
                 <p>From its 1900 establishment, the Paris Metro sparked fears that linking Paris with industrial banlieues would destabilize the capital. The Metro served wealthier areas while the RER serviced immigrant-majority towns—questioning the égalité of these networks.</p>
                 <div class="chapter-author">By Lauretta</div>
-                <div class="chapter-scene-indicator">Starts at Scene 14</div>
+                <div class="chapter-scene-indicator">Scenes 20–28</div>
             </a>
         </div>
     </section>
@@ -646,7 +647,7 @@
             <h3>About This Project</h3>
             <p>
                 This interactive story was created as part of an educational project exploring the historical geography of Paris. 
-                All maps are sourced from the Norman B. Leventhal Map & Education Center at the Boston Public Library, 
+                Maps are sourced from the Norman B. Leventhal Map & Education Center at the Boston Public Library and historical archives, 
                 made possible through the Panel Truck storytelling framework.
             </p>
             <div class="footer-links">
@@ -660,25 +661,29 @@
     </footer>
 
     <script>
-        // Function to jump to a specific scene by updating the attribute on the existing component
+        // Function to jump to a specific scene by recreating the panel-truck element
         function jumpToScene(sceneIndex) {
             // 1. Scroll to the map viewer
             const mapViewer = document.getElementById('map-viewer');
             mapViewer.scrollIntoView({ behavior: 'smooth' });
             
-            // 2. Find the existing panel-truck element
-            const panelTruck = document.querySelector('panel-truck');
+            // 2. Get the container and remove existing panel-truck
+            const container = document.querySelector('.panel-truck-container');
+            const existingPanel = container.querySelector('panel-truck');
             
-            // 3. Update the scene attribute directly
-            if (panelTruck) {
-                // Setting the attribute triggers the component to switch scenes
-                panelTruck.setAttribute('scene', sceneIndex.toString());
-            } else {
-                // Fallback for debugging, if the component hasn't initialized yet
-                console.error("Panel Truck component not found for scene jump.");
+            if (existingPanel) {
+                existingPanel.remove();
             }
             
-            return false; // Prevent default link behavior for <a> tags
+            // 3. Create new panel-truck element with the scene attribute
+            setTimeout(() => {
+                const newPanel = document.createElement('panel-truck');
+                newPanel.setAttribute('screenplay-src', 'screenplay.json');
+                newPanel.setAttribute('scene', sceneIndex.toString());
+                container.appendChild(newPanel);
+            }, 300);
+            
+            return false; // Prevent default link behavior
         }
     </script>
 </body>
