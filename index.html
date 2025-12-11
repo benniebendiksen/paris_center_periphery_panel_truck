@@ -591,7 +591,7 @@
         <div class="panel-wrapper">
             <div class="panel-header">
                 <h2>Interactive Map Story</h2>
-                <p>Scroll through 29 scenes across 3 historical maps</p>
+                <p>29 scenes across 5 historical maps</p>
             </div>
             <div class="panel-frame">
                 <div class="panel-truck-container">
@@ -607,37 +607,40 @@
             <p>Click any chapter to jump directly to that section</p>
         </div>
         <div class="chapters-grid">
-            
+            <!-- Chapter I: Array indices 1-5, displays as Scenes 2-6 -->
             <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(1)">
                 <div class="chapter-number">I</div>
                 <h4>The Birth of the Latin Quarter</h4>
                 <p>An 18th century map from 1705 depicts La Quartier Latin—where the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society, where King Philip Augustus granted students exemption from taxes and the right to be judged only by ecclesiastical courts.</p>
                 <div class="chapter-author">By Vanessa Moussa-Adamo</div>
-                <div class="chapter-scene-indicator">Scenes 1–5</div>
+                <div class="chapter-scene-indicator">Scenes 2–6</div>
             </a>
             
+            <!-- Chapter II: Array indices 6-11, displays as Scenes 7-12 -->
             <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(6)">
                 <div class="chapter-number">II</div>
                 <h4>Haussmann's Paris</h4>
                 <p>Under Napoleon III, Paris was transformed: boulevards widened, squares beautified. The heart became saturated with culture—rebuilt to be admired by the elite, while peripheral areas remained underinvested and symbolically distanced. Baudelaire wrote of his melancholy watching this transformation.</p>
                 <div class="chapter-author">By Freddly</div>
-                <div class="chapter-scene-indicator">Scenes 6–11</div>
+                <div class="chapter-scene-indicator">Scenes 7–12</div>
             </a>
             
+            <!-- Chapter III: Array indices 12-19, displays as Scenes 13-20 -->
             <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(12)">
                 <div class="chapter-number">III</div>
                 <h4>Immigration and Reconstruction</h4>
                 <p>After two World Wars, immigrants from Eastern Europe and North Africa rebuilt Paris. But housing was expensive in the center, so migrants settled in the banlieues—pushed aside, marginalized, watched, policed, and controlled. The myth of Paris contrasts sharply with the reality.</p>
                 <div class="chapter-author">By Gaelle</div>
-                <div class="chapter-scene-indicator">Scenes 12–19</div>
+                <div class="chapter-scene-indicator">Scenes 13–20</div>
             </a>
             
+            <!-- Chapter IV: Array indices 20-28, displays as Scenes 21-29 -->
             <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(20)">
                 <div class="chapter-number">IV</div>
                 <h4>Transportation and Division</h4>
                 <p>From its 1900 establishment, the Paris Metro sparked fears that linking Paris with industrial banlieues would destabilize the capital. The Metro served wealthier areas while the RER serviced immigrant-majority towns—questioning the égalité of these networks.</p>
                 <div class="chapter-author">By Lauretta</div>
-                <div class="chapter-scene-indicator">Scenes 20–28</div>
+                <div class="chapter-scene-indicator">Scenes 21–29</div>
             </a>
         </div>
     </section>
@@ -662,6 +665,7 @@
 
     <script>
         // Function to jump to a specific scene by recreating the panel-truck element
+        // Note: Panel Truck uses 0-indexed scene attribute but displays 1-indexed to users
         function jumpToScene(sceneIndex) {
             // 1. Scroll to the map viewer
             const mapViewer = document.getElementById('map-viewer');
