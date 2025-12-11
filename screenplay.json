@@ -44,7 +44,7 @@
     {
       "caption": {
         "title": "Paris: A Tale of Center and Periphery",
-        "text": "**Welcome to a journey through time.** This interactive story explores how Paris developed from a medieval university town into a city marked by profound socio-spatial divisions. Through historical maps and four interconnected narratives, we trace the emergence of the center-periphery divide that continues to shape the city today."
+        "text": "This interactive story explores how Paris developed from a medieval university town into a city marked by profound socio-spatial divisions. Through historical maps and four interconnected narratives, we trace the emergence of the center-periphery divide that continues to shape the city today."
       },
       "source": "paris-1705",
       "extent": "fit"
@@ -55,7 +55,7 @@
         "text": "This is an 18th century map dating back to 1705. The map has a clear depiction of the Parisian arrondissements. More specifically, **La Quartier Latin**—the area where many of the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society."
       },
       "source": "paris-1705",
-      "extent": "fit"
+      "extent": [800, 213, 1550, 903]
     },
     {
       "caption": {
@@ -63,7 +63,7 @@
         "text": "In medieval Paris, the birth of the Latin Quarter was founded on the students' desire to **separate themselves from the bourgeoisie** and the center of political power, creating an intellectual enclave on the Left Bank, also known as **L'Université** area in Paris."
       },
       "source": "paris-1705",
-      "extent": [1200, -2800, 2400, -1600]
+      "extent": [800, 213, 1550, 903]
     },
     {
       "caption": {
@@ -71,7 +71,7 @@
         "text": "This separation was formalized by a crucial jurisdictional privilege: after a violent riot, **King Philip Augustus** granted students and masters an exemption from taxes and military duties and—most importantly—guaranteed that they would only be judged by ecclesiastical courts, which were known not to apply the death penalty, thus distinguishing them from the Parisian bourgeoisie and common population."
       },
       "source": "paris-1705",
-      "extent": [1400, -2600, 2200, -1800]
+      "extent": [800, 213, 1550, 903]
     },
     {
       "caption": {
@@ -79,7 +79,7 @@
         "text": "This early academic freedom and its often-turbulent nature were later the target of satire, notably in the 16th century, where *Gargantua* ridicules the intellectual elite of the University. The university district is depicted as the center of a **\"foolish and easily excited populace,\"** gathering in sedition against the King's patience, with the sophists of the faculty chosen to engage in useless rhetoric."
       },
       "source": "paris-1705",
-      "extent": [1000, -3000, 2600, -1400]
+      "extent": "fit"
     },
     {
       "caption": {
@@ -180,7 +180,7 @@
     {
       "caption": {
         "title": "Watched, Policed, and Controlled",
-        "text": "Gael Faye reveals that same reality in *Paris Métèque*; the video clip ends with a black man being followed by the police. This shows how racialized groups are often being **watched, policed, and controlled.**"
+        "text": "That same reality in *Paris Métèque*; the video clip ends with a black man being followed by the police. This shows how racialized groups are often being **watched, policed, and controlled.**"
       },
       "source": "paris-environs",
       "extent": [2500, -4200, 5000, -2500]
