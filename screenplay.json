@@ -7,29 +7,6 @@
   },
   "sources": [
     {
-      "type": "staticImage",
-      "imageUrl": "paris1705.jpg",
-      "id": "paris-1705"
-    },
-    {
-      "type": "iiifManifest",
-      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/ht250677x/manifest",
-      "sequence": 0,
-      "canvas": 0,
-      "image": 0,
-      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:ht250677x",
-      "id": "nouveau-paris-haussmann"
-    },
-    {
-      "type": "iiifManifest",
-      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/nc583504p/manifest",
-      "sequence": 0,
-      "canvas": 0,
-      "image": 0,
-      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:nc583504p",
-      "id": "paris-environs"
-    },
-    {
       "type": "iiifManifest",
       "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/mg74t285q/manifest",
       "sequence": 0,
@@ -39,9 +16,22 @@
       "id": "paris-arrondissements"
     },
     {
-      "type": "staticImage",
-      "imageUrl": "Plan-Metro.png",
-      "id": "metro-plan"
+      "type": "iiifManifest",
+      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/3f463b188/manifest",
+      "sequence": 0,
+      "canvas": 0,
+      "image": 0,
+      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:3f463b188",
+      "id": "nouveau-paris"
+    },
+    {
+      "type": "iiifManifest",
+      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/nc583504p/manifest",
+      "sequence": 0,
+      "canvas": 0,
+      "image": 0,
+      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:nc583504p",
+      "id": "paris-environs"
     }
   ],
   "scenes": [
@@ -50,15 +40,15 @@
         "title": "Paris: A Tale of Center and Periphery",
         "text": "**Welcome to a journey through time.** This interactive story explores how Paris developed from a medieval university town into a city marked by profound socio-spatial divisions. Through historical maps and four interconnected narratives, we trace the emergence of the center-periphery divide that continues to shape the city today."
       },
-      "source": "paris-1705",
+      "source": "paris-arrondissements",
       "extent": "fit"
     },
     {
       "caption": {
         "title": "Chapter I: The Birth of the Latin Quarter",
-        "text": "This is an 18th century map dating back to 1705. The map has a clear depiction of the Parisian arrondissements. More specifically, **La Quartier Latin**—the area where many of the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society."
+        "text": "This map has a clear depiction of the Parisian arrondissements. More specifically, **La Quartier Latin**—the area where many of the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society."
       },
-      "source": "paris-1705",
+      "source": "paris-arrondissements",
       "extent": "fit"
     },
     {
@@ -66,31 +56,31 @@
         "title": "An Intellectual Enclave",
         "text": "In medieval Paris, the birth of the Latin Quarter was founded on the students' desire to **separate themselves from the bourgeoisie** and the center of political power, creating an intellectual enclave on the Left Bank, also known as **L'Université** area in Paris."
       },
-      "source": "paris-1705",
-      "extent": [1800, -3200, 3200, -1800]
+      "source": "paris-arrondissements",
+      "extent": [2000, -4000, 5000, -2000]
     },
     {
       "caption": {
         "title": "A Crucial Jurisdictional Privilege",
         "text": "This separation was formalized by a crucial jurisdictional privilege: after a violent riot, **King Philip Augustus** granted students and masters an exemption from taxes and military duties and—most importantly—guaranteed that they would only be judged by ecclesiastical courts, which were known not to apply the death penalty, thus distinguishing them from the Parisian bourgeoisie and common population."
       },
-      "source": "paris-1705",
-      "extent": [2000, -2800, 3000, -2000]
+      "source": "paris-arrondissements",
+      "extent": [2500, -3500, 5500, -1500]
     },
     {
       "caption": {
         "title": "Satire and Critique",
         "text": "This early academic freedom and its often-turbulent nature were later the target of satire, notably in the 16th century, where *Gargantua* ridicules the intellectual elite of the University. The university district is depicted as the center of a **\"foolish and easily excited populace,\"** gathering in sedition against the King's patience, with the sophists of the faculty chosen to engage in useless rhetoric."
       },
-      "source": "paris-1705",
-      "extent": [1600, -3000, 3400, -1600]
+      "source": "paris-arrondissements",
+      "extent": [2000, -4000, 5000, -2000]
     },
     {
       "caption": {
         "title": "Training Grounds of the Bourgeoisie",
         "text": "However, later on it became the **training grounds of the bourgeoisie**, separating the masses by those who could afford to participate in education and those who could not. Today it is still an educational hub, recognized for its contributions to French culture."
       },
-      "source": "paris-1705",
+      "source": "paris-arrondissements",
       "extent": "fit"
     },
     {
@@ -98,7 +88,7 @@
         "title": "Chapter II: Haussmann's Paris",
         "text": "This map represents much more than an aerial view of nineteenth-century Paris. In fact, it offers a crucial entry point for understanding how Paris developed during that time and up to the present day. We can already clearly see the **concentration of monuments, historical sites, cultural buildings, and centers of power** in the heart of Paris."
       },
-      "source": "nouveau-paris-haussmann",
+      "source": "nouveau-paris",
       "extent": "fit"
     },
     {
@@ -106,31 +96,31 @@
         "title": "The Second Empire Transformation",
         "text": "This phenomenon can be directly linked to Haussmann's efforts. Under the Second Empire, Paris was transformed in the blink of an eye by **widening boulevards, modernizing water and sewage networks, beautifying squares, and creating straight avenues and monumental perspectives.** These renovations shaped the Paris we know today."
       },
-      "source": "nouveau-paris-haussmann",
-      "extent": [2500, -4000, 5500, -2000]
+      "source": "nouveau-paris",
+      "extent": [3000, -4500, 7000, -2000]
     },
     {
       "caption": {
         "title": "Baudelaire's Melancholy",
         "text": "This transformation would push Charles Baudelaire to write. Overwhelmed by melancholy and nostalgia, Baudelaire began writing because he deeply hated the Parisian bourgeoisie and what he called \"modernity.\" The map perfectly illustrates this centralization. The heart of Paris appears as a **space saturated with culture and economic development.**"
       },
-      "source": "nouveau-paris-haussmann",
-      "extent": [3000, -3500, 5000, -2200]
+      "source": "nouveau-paris",
+      "extent": [4000, -4000, 6500, -2500]
     },
     {
       "caption": {
         "title": "A City for the Elite",
         "text": "This version of Paris was rebuilt to be admired, traversed, and inhabited by the **elite bourgeois classes**, unlike the peripheral zones. The center became the territory of upper-class professions, intellectual elites, high-value infrastructure, and everything prestigious."
       },
-      "source": "nouveau-paris-haussmann",
-      "extent": [2800, -3800, 5200, -2000]
+      "source": "nouveau-paris",
+      "extent": [3500, -4500, 6500, -2000]
     },
     {
       "caption": {
         "title": "The Empty Periphery",
         "text": "In contrast, these peripheral areas appear much emptier, almost decorative. This reveals how the spaces located beyond Paris's limits remained **underinvested, less developed, and symbolically placed at a distance**, reserved for the lower classes, immigrants, and those \"rejected\" by society."
       },
-      "source": "nouveau-paris-haussmann",
+      "source": "nouveau-paris",
       "extent": [500, -5000, 3000, -3000]
     },
     {
@@ -138,7 +128,7 @@
         "title": "A System of Segregation",
         "text": "Haussmannian logic reinforces a socio-spatial separation that would continue into the twentieth and twenty-first centuries. Even today, the Paris metropolitan region displays a sharp division between Paris and the **banlieue**, where workers, employees, social housing, and a racialized population live. From this, we can see how **a system of segregation took hold** and has become a contemporary reality."
       },
-      "source": "nouveau-paris-haussmann",
+      "source": "nouveau-paris",
       "extent": "fit"
     },
     {
@@ -234,16 +224,16 @@
         "title": "Two Systems, Two Classes",
         "text": "In 1977, the RER lines were established, reaching much further into the outskirts than the Paris Metro had. The RER was established to help integrate more citizens from the peripheries, but the fact that the Paris Metro primarily served wealthier areas, and the RER serviced **\"immigrant-majority towns\"** (Onur), implies that the conditions under which people belonging to either group travelled were vastly different in quality."
       },
-      "source": "metro-plan",
-      "extent": "fit"
+      "source": "paris-arrondissements",
+      "extent": [2000, -4000, 6000, -1200]
     },
     {
       "caption": {
         "title": "The Question of Égalité",
-        "text": "This **\"begs the question of the level of égalité that these networks actually provide\"** (Sununu). The map of the modern Metro system reveals these patterns—dense coverage in the center, with the RER lines extending outward to serve the periphery under different conditions."
+        "text": "This **\"begs the question of the level of égalité that these networks actually provide\"** (Sununu). The transportation map reveals these patterns—dense coverage in the center, with the RER lines extending outward to serve the periphery under different conditions."
       },
-      "source": "metro-plan",
-      "extent": "fit"
+      "source": "paris-arrondissements",
+      "extent": [1500, -3500, 5500, -1000]
     },
     {
       "caption": {
