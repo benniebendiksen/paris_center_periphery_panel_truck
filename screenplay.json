@@ -8,12 +8,12 @@
   "sources": [
     {
       "type": "staticImage",
-      "imageUrl": "https://benniebendiksen.github.io/paris_center_periphery_panel_truck/paris1705.jpg",
+      "imageFile": "https://benniebendiksen.github.io/paris_center_periphery_panel_truck/paris1705.jpg",
       "id": "paris-1705"
     },
     {
       "type": "staticImage",
-      "imageUrl": "https://benniebendiksen.github.io/paris_center_periphery_panel_truck/paris_monumental_2.jpg",
+      "imageFile": "https://benniebendiksen.github.io/paris_center_periphery_panel_truck/paris_monumental_2.jpg",
       "id": "paris-haussmann"
     },
     {
@@ -36,7 +36,7 @@
     },
     {
       "type": "staticImage",
-      "imageUrl": "https://benniebendiksen.github.io/paris_center_periphery_panel_truck/Plan-Metro.png",
+      "imageFile": "https://benniebendiksen.github.io/paris_center_periphery_panel_truck/Plan-Metro.png",
       "id": "metro-plan"
     }
   ],
