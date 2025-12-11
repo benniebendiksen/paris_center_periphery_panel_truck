@@ -1,15 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Panel truck demo</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris: A Tale of Center and Periphery</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-cream: #F5F0E8;
+            --color-parchment: #E8E0D0;
+            --color-sepia: #8B7355;
+            --color-dark-sepia: #5C4A37;
+            --color-ink: #2C2416;
+            --color-gold: #B8860B;
+            --color-gold-light: #DAA520;
+            --color-burgundy: #722F37;
+            --color-navy: #1E2A38;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--color-cream);
+            color: var(--color-ink);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Noise overlay for texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            z-index: 9999;
+        }
+        
+        /* Header */
+        .hero {
+            min-height: 80vh; /* Shortened slightly */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark-sepia) 50%, var(--color-burgundy) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(184, 134, 11, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(114, 47, 55, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--color-gold-light);
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--color-gold);
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 7rem);
+            font-weight: 400;
+            color: var(--color-cream);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero h1 em {
+            font-style: italic;
+            color: var(--color-gold-light);
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 400;
+            color: var(--color-parchment);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-authors {
+            font-size: 0.875rem;
+            color: var(--color-gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-cream);
+            opacity: 0.7;
+            animation: fadeInUp 1s ease-out 1s both, bounce 2s ease-in-out infinite 2s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .hero-scroll span {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        
+        .hero-scroll svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Introduction Section */
+        .intro {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem; /* Reduced padding */
+        }
+        
+        .intro-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            line-height: 1.6;
+            color: var(--color-dark-sepia);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .intro-text strong {
+            color: var(--color-burgundy);
+            font-weight: 600;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto;
+            max-width: 400px;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-sepia), transparent);
+        }
+        
+        .divider-icon {
+            width: 12px;
+            height: 12px;
+            border: 1px solid var(--color-sepia);
+            transform: rotate(45deg);
+        }
+        
+        /* Panel Truck Container */
+        .panel-container {
+            background: var(--color-navy);
+            padding: 2rem 0;
+            position: relative;
+        }
+        
+        .panel-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--color-cream), transparent);
+            pointer-events: none;
+        }
+        
+        .panel-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--color-cream), transparent);
+            pointer-events: none;
+        }
+        
+        .panel-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .panel-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--color-cream);
+        }
+        
+        .panel-header h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--color-gold-light);
+        }
+        
+        .panel-header p {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            letter-spacing: 0.05em;
+        }
+        
+        .panel-frame {
+            position: relative;
+            background: var(--color-ink);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(184, 134, 11, 0.1);
+        }
+        
+        .panel-frame::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(184, 134, 11, 0.2);
+            border-radius: 8px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .panel-truck-container {
+            width: 100%;
+            height: 75vh;
+            min-height: 500px;
+            max-height: 800px;
+        }
+        
+        /* Instructions Banner */
+        .instructions {
+            background: linear-gradient(135deg, var(--color-parchment), var(--color-cream));
+            padding: 2rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--color-parchment);
+        }
+        
+        .instruction-icons {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .instruction-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .instruction-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-burgundy);
+        }
+        
+        .instruction-item span {
+            font-size: 0.85rem;
+            color: var(--color-sepia);
+        }
+        
+        /* Chapter Overview */
+        .chapters {
+            padding: 6rem 2rem;
+            background: var(--color-cream);
+        }
+        
+        .chapters-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .chapters-title h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--color-ink);
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapters-title p {
+            color: var(--color-sepia);
+            font-size: 1rem;
+        }
+        
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .chapter-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--color-parchment);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-gold);
+        }
+        
+        .chapter-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--color-gold);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .chapter-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-ink);
+            margin-bottom: 0.75rem;
+        }
+        
+        .chapter-card p {
+            font-size: 0.9rem;
+            color: var(--color-sepia);
+            line-height: 1.6;
+            flex-grow: 1; /* Pushes the footer down */
+        }
+        
+        .chapter-author {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--color-burgundy);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-scene-indicator {
+            background: var(--color-parchment);
+            color: var(--color-dark-sepia);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background 0.3s ease;
+        }
+
+        .chapter-card:hover .chapter-scene-indicator {
+            background: var(--color-gold-light);
+            color: white;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-navy);
+            color: var(--color-cream);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--color-gold-light);
+        }
+        
+        .footer p {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--color-cream);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--color-gold-light);
+        }
+        
+        .footer-credits {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 4rem 1.5rem;
+            }
+            
+            .intro {
+                padding: 4rem 1.5rem;
+            }
+            
+            .intro-text {
+                font-size: 1.25rem;
+            }
+            
+            .panel-wrapper {
+                padding: 2rem 1rem;
+            }
+            
+            .panel-truck-container {
+                height: 60vh;
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
     <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="https://geoservices.leventhalmap.org/panel-truck/webcomponent-0.2/panel-truck.min.js"></script>
-    <div style="width: 100%; height: 700px">
-        <h1>Hi! this is my panel truck demo</h1>
-      <panel-truck screenplay-src="screenplay.json"></panel-truck>
-    </div>
-  </body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">An Interactive Map Story</span>
+            <h1>Paris: <br><em>Center & Periphery</em></h1>
+            <p class="hero-subtitle">A City of Privilege and Exclusion</p>
+            <p class="hero-authors">By Lauretta · Vanessa Moussa-Adamo · Bennie · Freddly · Gaelle</p>
+        </div>
+        <a href="#story" class="hero-scroll">
+            <span>Read On</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </header>
+
+    <section class="intro" id="story">
+        <p class="intro-text">
+            Paris is often celebrated as the capital of romance, fashion, and luxury, but its history reveals a deeper story of division. From the medieval privileges of the <strong>Latin Quarter</strong> to the exclusion of the modern <em>banlieues</em>, the city has always been shaped by a tension between its glittering center and its periphery.
+        </p>
+        <p class="intro-text">
+            We begin with the <strong>Latin Quarter</strong>, where medieval educational privileges first established a sense of exclusivity, before moving to <strong>Haussmann’s transformation</strong>, which physically restructured the city to favor the elite. The story continues through the <strong>post-war era</strong>, exploring how immigrant labor rebuilt the capital while being pushed to the edges. Finally, we analyze <strong>transportation networks</strong>, showing how the Metro and RER solidified these boundaries rather than erasing them.
+        </p>
+        <p class="intro-text">
+            This project traces that history using interactive maps to explore how architecture, immigration, and transportation have drawn lines between those who belong in the center and those pushed to the edge.
+        </p>
+        <div class="divider">
+            <div class="divider-icon"></div>
+        </div>
+    </section>
+
+    <section class="instructions">
+        <div class="instruction-icons">
+            <div class="instruction-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span>Click arrows to navigate</span>
+            </div>
+            <div class="instruction-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                </svg>
+                <span>Zoom with +/- buttons</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel-container" id="map-viewer">
+        <div class="panel-wrapper">
+            <div class="panel-header">
+                <h2>Interactive Map Story</h2>
+                <p>Scroll through 20 scenes across 3 historical maps</p>
+            </div>
+            <div class="panel-frame">
+                <div class="panel-truck-container">
+                    <panel-truck screenplay-src="screenplay.json"></panel-truck>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="chapters">
+        <div class="chapters-title">
+            <h2>Chapters</h2>
+        </div>
+        <div class="chapters-grid">
+            
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(1)">
+                <div class="chapter-number">I</div>
+                <h4>The Birth of the Latin Quarter</h4>
+                <p>In medieval Paris, students established an intellectual enclave on the Left Bank. King Philip Augustus granted them exemption from taxes and the right to be judged only by ecclesiastical courts—distinguishing them from the common population.</p>
+                <div class="chapter-author">By Vanessa Moussa-Adamo</div>
+                <div class="chapter-scene-indicator">Starts at Scene 1</div>
+            </a>
+            
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(5)">
+                <div class="chapter-number">II</div>
+                <h4>Haussmann's Paris</h4>
+                <p>Under Napoleon III, Paris was transformed: boulevards widened, squares beautified. The heart became saturated with culture—rebuilt to be admired by the elite, while peripheral areas remained underinvested and symbolically distanced.</p>
+                <div class="chapter-author">By Freddly</div>
+                <div class="chapter-scene-indicator">Starts at Scene 5</div>
+            </a>
+            
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(9)">
+                <div class="chapter-number">III</div>
+                <h4>Immigration and Reconstruction</h4>
+                <p>After two World Wars, immigrants from Eastern Europe and North Africa rebuilt Paris. But housing was expensive in the center, so migrants settled in the banlieues—pushed aside, marginalized, and often targeted by police.</p>
+                <div class="chapter-author">By Gaelle</div>
+                <div class="chapter-scene-indicator">Starts at Scene 9</div>
+            </a>
+            
+            <a href="#map-viewer" class="chapter-card" onclick="jumpToScene(14)">
+                <div class="chapter-number">IV</div>
+                <h4>Transportation and Division</h4>
+                <p>From its 1900 establishment, the Paris Metro sparked fears that linking Paris with industrial banlieues would destabilize the capital. The Metro served wealthier areas while the RER serviced immigrant-majority towns—questioning the égalité of these networks.</p>
+                <div class="chapter-author">By Lauretta</div>
+                <div class="chapter-scene-indicator">Starts at Scene 14</div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>About This Project</h3>
+            <p>
+                This interactive story was created as part of an educational project exploring the historical geography of Paris. 
+                All maps are sourced from the Norman B. Leventhal Map & Education Center at the Boston Public Library, 
+                made possible through the Panel Truck storytelling framework.
+            </p>
+            <div class="footer-links">
+                <a href="https://collections.leventhalmap.org/" target="_blank" rel="noopener">Leventhal Map Center</a>
+                <a href="https://github.com/bplmaps/panel-truck" target="_blank" rel="noopener">Panel Truck</a>
+            </div>
+            <div class="footer-credits">
+                Maps courtesy of the Norman B. Leventhal Map & Education Center Collection · December 2025
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to jump to a specific scene by updating the attribute on the existing component
+        function jumpToScene(sceneIndex) {
+            // 1. Scroll to the map viewer
+            const mapViewer = document.getElementById('map-viewer');
+            mapViewer.scrollIntoView({ behavior: 'smooth' });
+            
+            // 2. Find the existing panel-truck element
+            const panelTruck = document.querySelector('panel-truck');
+            
+            // 3. Update the scene attribute directly
+            if (panelTruck) {
+                // Setting the attribute triggers the component to switch scenes
+                panelTruck.setAttribute('scene', sceneIndex.toString());
+            } else {
+                // Fallback for debugging, if the component hasn't initialized yet
+                console.error("Panel Truck component not found for scene jump.");
+            }
+            
+            return false; // Prevent default link behavior for <a> tags
+        }
+    </script>
+</body>
 </html>

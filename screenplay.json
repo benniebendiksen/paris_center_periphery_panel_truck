@@ -1,1 +1,199 @@
-{"metadata":{"title":"What a beautiful day it is at UMASS Boston","author":"Bennie Bendiksen","subtitle":"The Sun is out","datePublished":"2025-11-04"},"sources":[{"type":"iiifManifest","manifest":"https://collections.leventhalmap.org/search/commonwealth:js9577479/manifest","sequence":0,"canvas":0,"image":0,"moreInfo":"https://collections.leventhalmap.org/search/commonwealth:js9577479","id":"1"}],"scenes":[{"caption":{"text":"It shows Lowell","title":"This is a fun map by some person"},"source":"1","timestamp":null,"extent":"fit","moreInfo":"https://collections.leventhalmap.org/search/commonwealth:js9577479"},{"caption":{"text":"all zoomed in","title":"We are zooming now!"},"source":"1","timestamp":null,"extent":[5021.35,-5339.175,8026.799999999999,-2679.975],"moreInfo":"https://collections.leventhalmap.org/search/commonwealth:js9577479"}]}
+{
+  "metadata": {
+    "title": "Paris: A Tale of Center and Periphery",
+    "author": "Vanessa Moussa-Adamo, Freddly, Gaelle & Lauretta",
+    "subtitle": "How the Capital of Romance shares a story of division",
+    "datePublished": "2025-12-08"
+  },
+  "sources": [
+    {
+      "type": "iiifManifest",
+      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/mg74t285q/manifest",
+      "sequence": 0,
+      "canvas": 0,
+      "image": 0,
+      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:mg74t285q",
+      "id": "paris-arrondissements"
+    },
+    {
+      "type": "iiifManifest",
+      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/3f463b188/manifest",
+      "sequence": 0,
+      "canvas": 0,
+      "image": 0,
+      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:3f463b188",
+      "id": "nouveau-paris"
+    },
+    {
+      "type": "iiifManifest",
+      "manifest": "https://ark.digitalcommonwealth.org/ark:/50959/nc583504p/manifest",
+      "sequence": 0,
+      "canvas": 0,
+      "image": 0,
+      "moreInfo": "https://collections.leventhalmap.org/search/commonwealth:nc583504p",
+      "id": "paris-environs"
+    }
+  ],
+  "scenes": [
+    {
+      "caption": {
+        "title": "Paris: A Tale of Center and Periphery",
+        "text": "**Welcome to a journey through time.** This interactive story explores how Paris developed from a medieval university town into a city marked by profound socio-spatial divisions. Through historical maps and four interconnected narratives, we trace the emergence of the center-periphery divide that continues to shape the city today."
+      },
+      "source": "paris-arrondissements",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "Chapter I: The Birth of the Latin Quarter",
+        "text": "In medieval Paris, the birth of the Latin Quarter was founded on the students' desire to separate themselves from the bourgeoisie and the center of political power, creating an intellectual enclave on the Left Bank, also known as **L'Université** area in Paris."
+      },
+      "source": "paris-arrondissements",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "A Crucial Jurisdictional Privilege",
+        "text": "This separation was formalized by a crucial jurisdictional privilege: after a violent riot, **King Philip Augustus** granted students and masters an exemption from taxes and military duties and—most importantly—guaranteed that they would only be judged by ecclesiastical courts, which were known not to apply the death penalty, thus distinguishing them from the Parisian bourgeoisie and common population."
+      },
+      "source": "paris-arrondissements",
+      "extent": [2000, -4000, 5000, -2000]
+    },
+    {
+      "caption": {
+        "title": "Satire and Critique",
+        "text": "This early academic freedom and its often-turbulent nature were later the target of satire, notably in the 16th century, where *Gargantua* ridicules the intellectual elite of the University. In this later critique, the university district is depicted as the center of a **\"foolish and easily excited populace,\"** gathering in sedition against the King's patience, with the sophists of the faculty chosen to engage in useless rhetoric."
+      },
+      "source": "paris-arrondissements",
+      "extent": [2500, -3500, 5500, -1500]
+    },
+    {
+      "caption": {
+        "title": "Training Grounds of the Bourgeoisie",
+        "text": "However, later on it became the **training grounds of the bourgeoisie** separating the masses by those who could afford to participate in education and those who could not afford to. Today it is still an educational hub, recognized for its contributions to French culture."
+      },
+      "source": "paris-arrondissements",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "Chapter II: Haussmann's Paris",
+        "text": "This map represents much more than an aerial view of nineteenth-century Paris. In fact, it offers a crucial entry point for understanding how Paris developed during that time and up to the present day. We can already clearly see the **concentration of monuments, historical sites, cultural buildings, and centers of power** in the heart of Paris. This phenomenon can be directly linked to Haussmann's efforts."
+      },
+      "source": "nouveau-paris",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "The Second Empire Transformation",
+        "text": "Under the Second Empire, Paris was transformed in the blink of an eye by **widening boulevards, modernizing water and sewage networks, beautifying squares, and creating straight avenues and monumental perspectives.** These renovations shaped the Paris we know today and this transformation would push or encourage Charles Baudelaire to write."
+      },
+      "source": "nouveau-paris",
+      "extent": [3000, -4500, 7000, -2000]
+    },
+    {
+      "caption": {
+        "title": "Baudelaire's Melancholy",
+        "text": "Baudelaire, overwhelmed by melancholy and nostalgia, began writing after this transformation because he deeply hated the Parisian bourgeoisie and what he called \"modernity.\" The map perfectly illustrates this centralization. The heart of Paris appears as a **space saturated with culture and economic development.** This version of Paris was rebuilt to be admired, traversed, and inhabited by the elite bourgeois classes, unlike the peripheral zones."
+      },
+      "source": "nouveau-paris",
+      "extent": [4000, -4000, 6500, -2500]
+    },
+    {
+      "caption": {
+        "title": "The Empty Periphery",
+        "text": "In contrast, these peripheral areas appear much emptier, almost decorative. This reveals how the spaces located beyond Paris's limits remained **underinvested, less developed, and symbolically placed at a distance**, reserved for the lower classes, immigrants, and those \"rejected\" by society. Haussmannian logic, one might admit, reinforces a socio-spatial separation. This separation would continue into the twentieth and twenty-first centuries."
+      },
+      "source": "nouveau-paris",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "Chapter III: Immigration and Reconstruction",
+        "text": "After World War I, France was devastated economically. Over **1.4 million soldiers disappeared**, millions were wounded. This major human loss created a shortage of workers. To help rebuild the country, France called on immigrants from Eastern Europe—specifically from Ukraine, Poland, and Italy."
+      },
+      "source": "paris-environs",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "The Second Wave",
+        "text": "After World War II, the situation was similar. Many factories had shut down. The economy was weak, and France turned again to immigrant labor. This time, the workers came from **North Africa—particularly Algeria, Morocco, Tunisia—as well as Sub-Saharan Africa.**"
+      },
+      "source": "paris-environs",
+      "extent": [2000, -4500, 5500, -2000]
+    },
+    {
+      "caption": {
+        "title": "The Expanding Boundaries",
+        "text": "Throughout history, Paris kept expanding, integrating nearby neighborhoods and former communes that were once part of the banlieues. These changes modified the city's boundaries, but the arrondissements of the centre have remained at the heart of Paris. Since housing was expensive in the center, many of these migrants settled in the banlieues. This contributed to the idea that **the banlieue is the area associated with immigrants and low-income individuals.**"
+      },
+      "source": "paris-environs",
+      "extent": [1500, -4000, 4500, -2200]
+    },
+    {
+      "caption": {
+        "title": "Pushed Aside and Policed",
+        "text": "Aurélien Masson describes how these immigrant workers, after rebuilding the city, were **pushed aside when new technologies replaced them.** Instead of being integrated, they're marginalized, and often targeted by police. In *Paris Noir*, in \"Le grand frère\" the big brother was accused of stealing by a police officer and asked for his papers—an everyday experience for many young men in the banlieues. This shows how racialized groups are often being **watched, policed, and controlled.**"
+      },
+      "source": "paris-environs",
+      "extent": [3000, -3800, 5500, -2000]
+    },
+    {
+      "caption": {
+        "title": "The Myth vs. The Reality",
+        "text": "That reality contrasts with the romanticization of Paris. The city is associated with the Eiffel Tower, the Louvre, Notre-Dame. For many, it's the capital of haute couture, fashion, luxury, and love. These tourist myths are engraved in the collective mind, and they contrast with the everyday life of the residents. Many newcomers arrive with **a dream of Paris that was \"sold to them.\"** Once they're there, they're confronted with a society that puts them in a box based on origin, skin color, social class, and zip code. Wherever they're from, they share the same experience upon arrival: they're \"foreigners,\" and don't fit the phenotype associated with a \"real\" Parisian."
+      },
+      "source": "paris-environs",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "Chapter IV: Transportation and Division",
+        "text": "From its establishment in 1900, the Paris Metro has been subject to many criticisms and concerns—especially those made by **\"Parisians inhabiting the wealthy core of the city,\"** who, from the very start, \"worried that any metropolitan rail system linking Paris with 'industrial suburbs' or *banlieues* would destabilize the capital\" (Sununu). Such pervasive fears would continually hold up the physical and socioeconomic division between the center of Paris and its periphery."
+      },
+      "source": "paris-arrondissements",
+      "extent": "fit"
+    },
+    {
+      "caption": {
+        "title": "The Glorious Thirty",
+        "text": "The prosperity of post-war Paris during the **\"Glorious Thirty\"**—a thirty-year-long period of remarkable economic growth between 1945 and 1975—led to an \"influx of migrants, both from rural areas within France and former French colonies,\" leading to a desperate need for more shelter (Onur). As the metro lines developed, migrants would rely on such methods of transportation to make it in and out of the heart of Paris for their work."
+      },
+      "source": "paris-arrondissements",
+      "extent": [1500, -3500, 5000, -1500]
+    },
+    {
+      "caption": {
+        "title": "Two Systems, Two Classes",
+        "text": "In 1977, the RER lines were established, reaching much further into the outskirts than the Paris Metro had. The RER was established to help integrate more citizens from the peripheries, but the fact that the Paris Metro primarily served wealthier areas, and the RER serviced **\"immigrant-majority towns\"** (Onur), implies that the conditions under which people belonging to either group travelled were vastly different in quality. This **\"begs the question of the level of égalité that these networks actually provide\"** (Sununu)."
+      },
+      "source": "paris-arrondissements",
+      "extent": [2000, -4000, 6000, -1200]
+    },
+    {
+      "caption": {
+        "title": "A Shared Space",
+        "text": "Though conditions of each system were different, the metro still served as a **shared space**—a meeting ground for the wealthy, the impoverished, and everyone in between as they navigated life in Paris. Polish-French poet Guillaume Apollinaire would remark on this *mélange* of people in his poem \"Zone\": *\"Eyes filled with tears you look at those poor emigrants / They believe in God they pray the women nurse their children / Their smell fills the waiting room of the station Saint-Lazare.\"*"
+      },
+      "source": "paris-arrondissements",
+      "extent": [3000, -3200, 5500, -1400]
+    },
+    {
+      "caption": {
+        "title": "Saint-Lazare: Symbol of Progress",
+        "text": "Saint-Lazare was the very first train station, predating the inception of the Paris Metro. This station had been well known and well regarded, **immortalized in artworks by Claude Monet and Manet**—a station that represented the progress France was making on the world stage. Yet this progress was something that those further away from the core would not be able to experience equally."
+      },
+      "source": "paris-arrondissements",
+      "extent": [2500, -2800, 4500, -1500]
+    },
+    {
+      "caption": {
+        "title": "Conclusion: A Geography of Inequality",
+        "text": "**Immigrants rebuilt Paris, yet they're pushed aside to its banlieues—physically and socially.** This divide between the center and the periphery reveals how deep social inequalities and immigration shaped the geography of the city. Even today, the Paris metropolitan region displays a sharp division between Paris—the territory of upper-class professions, intellectual elites, and high-value infrastructure—and the banlieue, where workers, employees, social housing, and a racialized population live. From this, we can see how a system of segregation took hold and has become a contemporary reality."
+      },
+      "source": "paris-arrondissements",
+      "extent": "fit"
+    }
+  ]
+}
