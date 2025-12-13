@@ -52,15 +52,15 @@
     {
       "caption": {
         "title": "Chapter I: The Birth of the Latin Quarter",
-        "text": "This is an 18th century map dating back to 1705. The map has a clear depiction of the Parisian arrondissements. More specifically, **La Quartier Latin**—the area where many of the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society."
+        "text": "This is an 18th century map dating back to 1705. The map has a clear depiction of the Parisian arrondissements. More specifically, **Le Quartier Latin**—the area where many of the oldest colleges and universities in France are located. This area represented the intellectual and most elite groups of French society."
       },
       "source": "paris-1705",
-      "extent": [800, 213, 1550, 903]
+      "extent": "fit"
     },
     {
       "caption": {
         "title": "An Intellectual Enclave",
-        "text": "In medieval Paris, the birth of the Latin Quarter was founded on the students' desire to **separate themselves from the bourgeoisie** and the center of political power, creating an intellectual enclave on the Left Bank, also known as **L'Université** area in Paris."
+        "text": "Here we focus on Le Quartier Latin. In medieval Paris, the birth of the Latin Quarter was founded on the students' desire to **separate themselves from the bourgeoisie** and the center of political power, creating an intellectual enclave on the Left Bank, also known as **L'Université** area in Paris."
       },
       "source": "paris-1705",
       "extent": [800, 213, 1550, 903]
@@ -79,7 +79,7 @@
         "text": "This early academic freedom and its often-turbulent nature were later the target of satire, notably in the 16th century, where *Gargantua* ridicules the intellectual elite of the University. The university district is depicted as the center of a **\"foolish and easily excited populace,\"** gathering in sedition against the King's patience, with the sophists of the faculty chosen to engage in useless rhetoric."
       },
       "source": "paris-1705",
-      "extent": "fit"
+      "extent": [800, 213, 1550, 903]
     },
     {
       "caption": {
@@ -100,34 +100,34 @@
     {
       "caption": {
         "title": "The Second Empire Transformation",
-        "text": "This phenomenon can be directly linked to Haussmann's efforts. Under the Second Empire, Paris was transformed in the blink of an eye by **widening boulevards, modernizing water and sewage networks, beautifying squares, and creating straight avenues and monumental perspectives.** These renovations shaped the Paris we know today."
+        "text": "This phenomenon can be directly linked to Haussmann's efforts..."
       },
       "source": "paris-haussmann",
-      "extent": [2000, -3500, 4500, -1500]
+      "extent": "fit"
     },
     {
       "caption": {
         "title": "Baudelaire's Melancholy",
-        "text": "This transformation would push Charles Baudelaire to write. Overwhelmed by melancholy and nostalgia, Baudelaire began writing because he deeply hated the Parisian bourgeoisie and what he called \"modernity.\" The map perfectly illustrates this centralization. The heart of Paris appears as a **space saturated with culture and economic development.**"
+        "text": "This transformation would push Charles Baudelaire to write..."
       },
       "source": "paris-haussmann",
-      "extent": [2500, -3000, 4000, -2000]
+      "extent": "fit"
     },
     {
       "caption": {
         "title": "A City for the Elite",
-        "text": "This version of Paris was rebuilt to be admired, traversed, and inhabited by the **elite bourgeois classes**, unlike the peripheral zones. The center became the territory of upper-class professions, intellectual elites, high-value infrastructure, and everything prestigious."
+        "text": "This version of Paris was rebuilt to be admired..."
       },
       "source": "paris-haussmann",
-      "extent": [2200, -3200, 4200, -1800]
+      "extent": "fit"
     },
     {
       "caption": {
         "title": "The Empty Periphery",
-        "text": "In contrast, these peripheral areas appear much emptier, almost decorative. This reveals how the spaces located beyond Paris's limits remained **underinvested, less developed, and symbolically placed at a distance**, reserved for the lower classes, immigrants, and those \"rejected\" by society."
+        "text": "In contrast, these peripheral areas appear much emptier..."
       },
       "source": "paris-haussmann",
-      "extent": [500, -4000, 2500, -2500]
+      "extent": [0, 233, 800, 1383]
     },
     {
       "caption": {
@@ -140,7 +140,7 @@
     {
       "caption": {
         "title": "Chapter III: Immigration and Reconstruction",
-        "text": "After World War I, France was devastated economically. Over **1.4 million soldiers disappeared**, millions were wounded. This major human loss created a shortage of workers. To help rebuild the country, France called on immigrants from Eastern Europe—specifically from Ukraine, Poland, and Italy."
+        "text": "After World War I, France was devastated economically. Over **1.4 million soldiers disappeared**, millions were wounded. This major human loss created a shortage of workers. To help rebuild the country, France called on immigrants from Eastern Europe—specifically from Ukraine and Poland, and also from Italy."
       },
       "source": "paris-environs",
       "extent": "fit"
@@ -148,15 +148,16 @@
     {
       "caption": {
         "title": "The Second Wave",
-        "text": "After World War II, the situation was similar. Many factories had shut down. The economy was weak, and France turned again to immigrant labor. This time, the workers came from **North Africa—particularly Algeria, Morocco, Tunisia—as well as Sub-Saharan Africa.**"
+        "text": "After World War II, the situation was similar. Many factories had shut down. The economy was weak, and France turned again to immigrant labor. This time, the workers came from **North Africa—particularly Algeria, Morocco, Tunisia—as well as Sub-Saharan Africa.**\n\nHere we can also locate the **Eiffel Tower**, built in 1889 and now the most recognizable symbol of Paris. For tourists around the world, it stands for love and romance and remains one of the most visited monuments in the city."
       },
       "source": "paris-environs",
-      "extent": [2000, -4500, 5500, -2000]
+      "extent": [1650, -3300, 2550, -2400]
+
     },
     {
       "caption": {
         "title": "The Expanding Boundaries",
-        "text": "Throughout history, Paris kept expanding, integrating nearby neighborhoods and former communes that were once part of the banlieues. These changes modified the city's boundaries, but the arrondissements of the centre have remained at the heart of Paris. Since housing was expensive in the center, many of these migrants settled in the banlieues."
+        "text": "Throughout history, Paris kept expanding, integrating nearby neighborhoods and former communes that were once part of the banlieues. These changes modified the city's boundaries, but the arrondissements of the centre have remained at the heart of Paris. Since housing was expensive in the center, many of these migrants settled in the banlieues.\n\nOn the map, the limits of Paris stand out as a dense ring of streets and buildings that gradually fade into more open space. By zooming toward this edge, we can see where the built-up core ends and the surrounding communes begin—places that would later be labeled as *banlieues* and treated as separate from the prestigious center."
       },
       "source": "paris-environs",
       "extent": [1500, -4000, 4500, -2200]
@@ -164,7 +165,7 @@
     {
       "caption": {
         "title": "The Banlieue Identity",
-        "text": "This contributed to the idea that **the banlieue is the area associated with immigrants and low-income individuals.** The periphery became defined not just geographically, but socially and racially."
+        "text": "This contributed to the idea that **the banlieue is the area associated with immigrants and low-income individuals.** The periphery became defined not just geographically, but socially and racially.\n\nIn this peripheral view, blocks thin out and roads seem to radiate away from the center. The cartographic shift—from dense monumental core to looser, more fragmented outskirts—captures how the banlieue was literally drawn at the margins of the city, both on the map and in the urban imagination."
       },
       "source": "paris-environs",
       "extent": [1000, -4500, 3500, -2500]
@@ -172,34 +173,34 @@
     {
       "caption": {
         "title": "Pushed Aside and Policed",
-        "text": "Aurélien Masson describes how these immigrant workers, after rebuilding the city, were **pushed aside when new technologies replaced them.** Instead of being integrated, they're marginalized, and often targeted by police. In *Paris Noir*, \"Le grand frère\" depicts a young man accused of stealing by a police officer and asked for his papers—an everyday experience for many in the banlieues."
+        "text": "Aurélien Masson describes how these immigrant workers, after rebuilding the city, were **pushed aside when new technologies replaced them.** Instead of being integrated, they're marginalized, and often targeted by police. In *Paris Noir*, \"Le grand frère\" depicts a young man accused of stealing by a police officer and asked for his papers—an everyday experience for many in the banlieues.\n\nTo the west of the historic core, the map highlights **Neuilly-sur-Seine**, a wealthy residential commune often associated with upper-middle-class and elite households. Its tree-lined avenues and proximity to the center underline how some suburban spaces function as privileged extensions of Paris rather than as marginalized banlieues."
       },
       "source": "paris-environs",
-      "extent": [3000, -3800, 5500, -2000]
+      "extent": [1650, -2900, 2550, -2000]
     },
     {
       "caption": {
         "title": "Watched, Policed, and Controlled",
-        "text": "That same reality in *Paris Métèque*; the video clip ends with a black man being followed by the police. This shows how racialized groups are often being **watched, policed, and controlled.**"
+        "text": "That same reality in *Paris Métèque*; the video clip ends with a black man being followed by the police. This shows how racialized groups are often being **watched, policed, and controlled**. By contrast, on the south-eastern edge of the map we can find **Ivry-sur-Seine**, an industrial and working-class banlieue that has historically welcomed many immigrant families.\n\nFocusing on Ivry reminds us that the periphery is not a neutral space: it is where racialized residents are disproportionately watched, policed, and controlled."
       },
       "source": "paris-environs",
-      "extent": [2500, -4200, 5000, -2500]
+      "extent": [3950, -4100, 4850, -3200]
     },
     {
       "caption": {
         "title": "The Myth vs. The Reality",
-        "text": "That reality contrasts with the romanticization of Paris. The city is associated with the Eiffel Tower, the Louvre, Notre-Dame. For many, it's the capital of haute couture, fashion, luxury, and love. These tourist myths are engraved in the collective mind, and they contrast with the everyday life of the residents."
+        "text": "That reality contrasts with the romanticization of Paris. The city is associated with the Eiffel Tower, the Louvre, Notre-Dame. For many, it's the capital of haute couture, fashion, luxury, and love. These tourist myths are engraved in the collective mind, and they contrast with the everyday life of the residents.\n\nThe map also shows the **Louvre**, in the 1st arrondissement. Originally built as a fortress in 1190 under King Philippe Auguste, it was transformed into a public museum in 1793 during the French Revolution and today is the most visited museum in the world—another powerful emblem of the Parisian center that immigrants help sustain but often cannot inhabit."
       },
       "source": "paris-environs",
-      "extent": "fit"
+      "extent": [2700, -3300, 3600, -2400]
     },
     {
       "caption": {
         "title": "Dreams Sold to Them",
-        "text": "Many newcomers from Asia, the Americas and Africa arrive with **a dream of Paris that was \"sold to them.\"** Once they're there, they're confronted with a society that puts them in a box based on origin, skin color, social class, and zip code. Wherever they're from, they share the same experience: they're \"foreigners,\" and don't fit the phenotype associated with a \"real\" Parisian."
+        "text": "Many newcomers from Asia, the Americas and Africa arrive with **a dream of Paris that was \"sold to them.\"** Once they're there, they're confronted with a society that puts them in a box based on origin, skin color, social class, and zip code. Wherever they're from, they share the same experience: they're \"foreigners,\" and don't fit the phenotype associated with a \"real\" Parisian.\n\nAs we focus on the Île de la Cité, **Notre-Dame de Paris** anchors the religious and cultural heart of the capital. This medieval cathedral, begun in the 12th century, has long symbolized national identity and spiritual authority—precisely the kind of iconic image that is sold to visitors, while the inequalities of the banlieues remain out of frame."
       },
       "source": "paris-environs",
-      "extent": [2000, -4000, 5000, -2200]
+      "extent": [3200, -3300, 4100, -2400]
     },
     {
       "caption": {
